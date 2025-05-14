@@ -1,0 +1,16 @@
+{
+  "name": "elysia-nest-basic-example",
+  "version": "1.0.0",
+  "description": "Basic example for elysia-nest",
+  "module": "main.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun main.ts",
+    "dev": "bun --watch main.ts"
+  },
+  "dependencies": {
+    "elysia": "^1.2.25",
+    "elysia-nest": "file:../../",
+    "reflect-metadata": "^0.2.2"
+  }
+} 

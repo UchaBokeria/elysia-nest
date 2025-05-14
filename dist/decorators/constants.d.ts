@@ -1,0 +1,12 @@
+export declare const MODULE_METADATA = "module:metadata";
+export declare const ROUTE_PREFIX_METADATA = "route:prefix";
+export declare const ROUTE_METADATA = "route:metadata";
+export declare const PARAMS_METADATA = "params:metadata";
+export declare const GUARDS_METADATA = "guards:metadata";
+export declare const PIPES_METADATA = "pipes:metadata";
+export declare const INTERCEPTORS_METADATA = "interceptors:metadata";
+export declare const RESPONSE_INTERCEPTORS_METADATA = "response:interceptors:metadata";
+export declare const EXCEPTION_FILTER_METADATA = "exception:filter:metadata";
+export declare const INJECTABLE_METADATA = "injectable:metadata";
+export declare const EVENT_LISTENER_METADATA = "event:listener:metadata";
+export declare const SCHEDULED_JOB_METADATA = "scheduled:job:metadata";

@@ -1,0 +1,47 @@
+{
+  "name": "elysia-nest",
+  "version": "0.1.0",
+  "description": "A NestJS-like framework for Bun using Elysia",
+  "module": "dist/index.js",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bun build src/index.ts --target node --outdir dist",
+    "dev": "bun --watch src/index.ts",
+    "test": "bun test",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "elysia",
+    "bun",
+    "nestjs",
+    "framework",
+    "web",
+    "api",
+    "rest",
+    "typescript"
+  ],
+  "author": "Ucha Bokeria",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/elysia-nest"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "elysia": "^1.2.25",
+    "reflect-metadata": "^0.2.2"
+  },
+  "peerDependencies": {
+    "bun": "^1.0.0"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "typescript": "^5.8.3"
+  }
+}
