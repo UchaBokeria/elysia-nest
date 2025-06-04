@@ -1,7 +1,7 @@
-import { Controller, Get } from '../../src';
+import { Controller, Get } from 'elysia-nest';
 import { AppService } from './app.service';
 
-@Controller('api')
+@Controller('ctrl')
 export class AppController {
   constructor(private readonly appService: AppService) {}
   

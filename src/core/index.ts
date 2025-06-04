@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import { Elysia } from 'elysia';
-import { Module, Controller, Factory, initializeApp } from './decorators';
-import { Get, Post, Put, Patch, Delete } from './http-methods';
+import { Module, Controller, Bootstrap } from './decorators';
+import { Get, Post, Put, Patch, Delete } from '../decorators/http.decorators';
 
 // Re-export everything
 export {
@@ -17,6 +17,5 @@ export {
   Delete,
   
   // Application factory and initializer
-  Factory,
-  initializeApp
+  Bootstrap
 }; 

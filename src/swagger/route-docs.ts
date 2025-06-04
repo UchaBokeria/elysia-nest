@@ -1,11 +1,11 @@
 import 'reflect-metadata';
-import { PARAMS_METADATA, ParamType } from '@utils/decorators/param.decorators';
-import type { ParamInfo } from '@utils/decorators/param.decorators';
-import { ROUTE_METADATA, ROUTE_PREFIX_METADATA } from '@utils/decorators';
-import type { RouteMetadata } from '@utils/decorators';
+import { PARAMS_METADATA, ParamType } from '../decorators/param.decorators';
+import type { ParamInfo } from '../decorators/param.decorators';
+import { ROUTE_METADATA, ROUTE_PREFIX_METADATA } from '../decorators';
+import type { RouteMetadata } from '../decorators';
 import { getOrCreateSchema } from './dto-to-schema';
-import { getApiDocs } from '@utils/decorators/swagger.decorator';
-import type { ApiDocsOptions, ApiResponseExample } from '@utils/decorators/swagger.decorator';
+import { getApiDocs } from '../decorators/swagger.decorator';
+import type { ApiDocsOptions, ApiResponseExample } from '../decorators/swagger.decorator';
 
 /**
  * Interface representing an OpenAPI path item

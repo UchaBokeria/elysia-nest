@@ -4,7 +4,8 @@
 export declare class HttpException extends Error {
     private readonly response;
     readonly statusCode: number;
-    constructor(response: string | Record<string, any>, statusCode: number);
+    readonly details?: Record<string, any> | undefined;
+    constructor(response: string | Record<string, any>, statusCode: number, details?: Record<string, any> | undefined);
     /**
      * Get the exception response
      */

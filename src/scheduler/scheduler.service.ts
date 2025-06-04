@@ -1,4 +1,4 @@
-import { Injectable } from '@/utils/core';
+import { Injectable } from '../di';
 import type { 
   CronTaskOptions, 
   IScheduler, 

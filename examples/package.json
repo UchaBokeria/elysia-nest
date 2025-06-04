@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "elysia": "^1.2.25",
-    "elysia-nest": "file:../../",
+    "elysia-nest": "file:../dist/",
     "reflect-metadata": "^0.2.2"
   }
 } 

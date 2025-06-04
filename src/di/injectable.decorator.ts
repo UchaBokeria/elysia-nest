@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import { Scope, type ScopeOptions as importedScopeOptions } from './scope-options.interface';
 
 export const INJECTABLE_METADATA = Symbol('INJECTABLE_METADATA');
 
@@ -6,13 +7,12 @@ export interface Type<T = any> {
   new (...args: any[]): T;
 }
 
-export interface InjectableOptions {
-  scope?: 'singleton' | 'transient';
+export interface InjectableOptions extends importedScopeOptions {
   providedIn?: 'root' | Type<any> | null;
 }
 
 const defaultOptions: InjectableOptions = {
-  scope: 'singleton',
+  scope: Scope.SINGLETON,
   providedIn: 'root',
 };
 

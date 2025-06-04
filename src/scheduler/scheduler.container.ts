@@ -1,7 +1,7 @@
 import { Scheduler } from './scheduler.service';
-import { getLifecycleManager } from '@/utils/lifecycle-container';
+import { getLifecycleManager } from '../lifecycle';
 
-/**
+/*
  * Singleton container for the scheduler
  */
 class SchedulerContainer {

@@ -30,17 +30,17 @@ bun add elysia-nest
 ```typescript
 // main.ts
 import { Elysia } from 'elysia';
-import { initializeApp } from 'elysia-nest';
+import { Bootstrap } from 'elysia-nest';
 import { AppModule } from './app.module';
 
-async function bootstrap() {
-  const app = await initializeApp(new Elysia(), AppModule);
+async function main() {
+  const app = await Bootstrap(new Elysia(), AppModule);
   
   app.listen(3000);
   console.log(`Server is running on http://localhost:3000`);
 }
 
-bootstrap();
+main();
 ```
 
 ```typescript
@@ -166,16 +166,15 @@ export class AppService implements OnModuleInit, OnApplicationBootstrap {
   }
 }
 ```
-
 ## Examples
 
-Check out the examples directory for more detailed examples:
+The `examples` directory currently contains a basic "hello world" application to help you get started:
 
-- Basic CRUD application
-- Authentication with Guards
-- Using Interceptors
-- Event-based communication
-- Scheduled tasks
+- **`examples/basic`**: Demonstrates a minimal setup with a single module, controller, and service, exposing a `GET /api/hello` endpoint. This example showcases the fundamental project structure and how components are wired together.
+
+You can run this example by navigating to its directory, installing dependencies with `bun install`, and running `bun run dev`.
+
+More detailed examples showcasing features like CRUD operations, authentication with Guards, usage of Interceptors, event-based communication, and scheduled tasks would be valuable additions to this project and may be added in the future.
 
 ## License
 

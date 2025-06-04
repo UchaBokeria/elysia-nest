@@ -1,3 +1,6 @@
+import { Provider } from '../di/provider.interface'; // Import Provider type
+import { MiddlewareType } from '../interfaces/middleware.interface'; // Import MiddlewareType
+
 // Route metadata
 export interface RouteMetadata {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE' | 'OPTIONS' | 'HEAD';
@@ -7,11 +10,13 @@ export interface RouteMetadata {
 
 // Module options
 export interface ModuleOptions {
+  prefix?: string;
   imports?: any[];
   controllers?: any[];
-  providers?: any[];
-  middlewares?: any[];
+  providers?: Provider[]; // Use the new Provider type
+  middlewares?: MiddlewareType[]; // Use the new MiddlewareType
   exports?: any[];
+  children?: any[];
 }
 
 // Parameter decorator metadata

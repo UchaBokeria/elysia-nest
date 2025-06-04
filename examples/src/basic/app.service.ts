@@ -1,4 +1,4 @@
-import { Injectable } from '../../src';
+import { Injectable } from 'elysia-nest';
 
 @Injectable()
 export class AppService {

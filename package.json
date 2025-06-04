@@ -1,6 +1,6 @@
 {
   "name": "elysia-nest",
-  "version": "0.1.0",
+  "version": "0.7.3",
   "description": "A NestJS-like framework for Bun using Elysia",
   "module": "dist/index.js",
   "type": "module",
@@ -12,10 +12,11 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "bun build src/index.ts --target node --outdir dist",
     "dev": "bun --watch src/index.ts",
+    "types": "tsc --emitDeclarationOnly",
+    "build": "bun build src/index.ts --target node --outdir dist && bun run types",
     "test": "bun test",
-    "prepublishOnly": "bun run build"
+    "publish": "bun run build && scripts/publish.sh"
   },
   "keywords": [
     "elysia",
@@ -34,8 +35,12 @@
   },
   "license": "MIT",
   "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "cron": "^4.3.1",
     "elysia": "^1.2.25",
-    "reflect-metadata": "^0.2.2"
+    "reflect-metadata": "^0.2.2",
+    "uuid": "^11.1.0"
   },
   "peerDependencies": {
     "bun": "^1.0.0"

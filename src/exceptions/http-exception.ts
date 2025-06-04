@@ -4,10 +4,12 @@
 export class HttpException extends Error {
   constructor(
     private readonly response: string | Record<string, any>,
-    public readonly statusCode: number
+    public readonly statusCode: number,
+    public readonly details?: Record<string, any>
   ) {
     super(typeof response === 'string' ? response : JSON.stringify(response));
     this.name = this.constructor.name;
+    this.details = details;
   }
 
   /**
